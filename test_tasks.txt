@@ -5,7 +5,22 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
 64 bytes from 1.1.1.1: icmp_seq=3 ttl=55 time=5.75 ms
 64 bytes from 1.1.1.1: icmp_seq=4 ttl=55 time=5.54 ms
 64 bytes from 1.1.1.1: icmp_seq=5 ttl=55 time=5.75 ms
-^C
+
 --- 1.1.1.1 ping statistics ---
 5 packets transmitted, 5 received, 0% packet loss, time 4008ms
 rtt min/avg/max/mdev = 5.540/5.709/5.886/0.118 mstest
+
+############## curl 
+curl -I  https://google.com
+HTTP/2 301 
+location: https://www.google.com/
+content-type: text/html; charset=UTF-8
+content-security-policy-report-only: object-src 'none';base-uri 'self';script-src 'nonce-ZXQgtqkTo1QdfQrxk5RSoA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+date: Sun, 19 May 2024 09:54:21 GMT
+expires: Tue, 18 Jun 2024 09:54:21 GMT
+cache-control: public, max-age=2592000
+server: gws
+content-length: 220
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
