@@ -37,3 +37,39 @@ Saving to: ‘sample.pdf’
 sample.pdf                                  100%[==========================================================================================>]  18.37K  --.-KB/s    in 0.001s  
 
 2024-05-19 10:00:59 (32.2 MB/s) - ‘sample.pdf’ saved [18810/18810]
+
+
+############## task №3 (check services status)
+service ssh status
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Sat 2024-05-18 06:09:17 UTC; 1 day 4h ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 5622 (sshd)
+      Tasks: 1 (limit: 4433)
+     Memory: 2.5M (peak: 19.7M)
+        CPU: 16.955s
+     CGroup: /system.slice/ssh.service
+             └─5622 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+ FTP
+valera@test:~$ service vsftpd status
+● vsftpd.service - vsftpd FTP server
+     Loaded: loaded (/usr/lib/systemd/system/vsftpd.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2024-05-18 15:29:42 UTC; 18h ago
+   Main PID: 9354 (vsftpd)
+      Tasks: 1 (limit: 4433)
+     Memory: 668.0K (peak: 18.4M)
+        CPU: 388ms
+     CGroup: /system.slice/vsftpd.service
+             └─9354 /usr/sbin/vsftpd /etc/vsftpd.conf
+
+ NFS
+valera@test:~$ service nfs-server status
+● nfs-server.service - NFS server and services
+     Loaded: loaded (/usr/lib/systemd/system/nfs-server.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2024-05-18 16:04:18 UTC; 18h ago
+   Main PID: 10733 (code=exited, status=0/SUCCESS)
+        CPU: 10ms
