@@ -10,7 +10,7 @@ PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
 5 packets transmitted, 5 received, 0% packet loss, time 4008ms
 rtt min/avg/max/mdev = 5.540/5.709/5.886/0.118 mstest
 
-############## curl 
+##############  curl 
 curl -I  https://google.com
 HTTP/2 301 
 location: https://www.google.com/
@@ -24,3 +24,16 @@ content-length: 220
 x-xss-protection: 0
 x-frame-options: SAMEORIGIN
 alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+##############  wget
+wget https://pdfobject.com/pdf/sample.pdf
+--2024-05-19 10:00:59--  https://pdfobject.com/pdf/sample.pdf
+Resolving pdfobject.com (pdfobject.com)... 185.199.111.153, 185.199.108.153, 185.199.109.153, ...
+Connecting to pdfobject.com (pdfobject.com)|185.199.111.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18810 (18K) [application/pdf]
+Saving to: ‘sample.pdf’
+
+sample.pdf                                  100%[==========================================================================================>]  18.37K  --.-KB/s    in 0.001s  
+
+2024-05-19 10:00:59 (32.2 MB/s) - ‘sample.pdf’ saved [18810/18810]
